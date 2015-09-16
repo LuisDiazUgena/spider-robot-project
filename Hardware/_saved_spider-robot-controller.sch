@@ -105,9 +105,9 @@ Text GLabel 9000 2500 2    60   Input ~ 0
 RST
 Text GLabel 9200 1550 2    60   Input ~ 0
 SCK
-Text GLabel 9950 2850 0    60   Input ~ 0
+Text GLabel 7050 5800 0    60   Input ~ 0
 VCC
-Text GLabel 10200 2750 0    60   Input ~ 0
+Text GLabel 7300 5700 0    60   Input ~ 0
 GND
 Text GLabel 6750 3250 0    60   Input ~ 0
 GND
@@ -653,26 +653,24 @@ Wire Wire Line
 $Comp
 L CONN_01X06 P?
 U 1 1 55F9C036
-P 10500 2700
-F 0 "P?" H 10500 3050 50  0000 C CNN
-F 1 "Bluetooth_header" V 10600 2700 50  0000 C CNN
-F 2 "" H 10500 2700 60  0000 C CNN
-F 3 "" H 10500 2700 60  0000 C CNN
-	1    10500 2700
+P 7600 5650
+F 0 "P?" H 7600 6000 50  0000 C CNN
+F 1 "Bluetooth_header" V 7700 5650 50  0000 C CNN
+F 2 "" H 7600 5650 60  0000 C CNN
+F 3 "" H 7600 5650 60  0000 C CNN
+	1    7600 5650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9950 2850 10300 2850
+	7050 5800 7400 5800
 Wire Wire Line
-	10200 2750 10300 2750
-Text GLabel 9950 2650 0    60   Input ~ 0
+	7300 5700 7400 5700
+Text GLabel 7050 5600 0    60   Input ~ 0
 BTX
 Wire Wire Line
-	9950 2650 10300 2650
-Text GLabel 10200 2550 0    60   Input ~ 0
+	7050 5600 7400 5600
+Text GLabel 6700 5400 0    60   Input ~ 0
 BRX
-Wire Wire Line
-	10200 2550 10300 2550
 Text GLabel 9250 2750 2    60   Input ~ 0
 BRX
 Wire Wire Line
@@ -681,4 +679,49 @@ Text GLabel 9000 2650 2    60   Input ~ 0
 BTX
 Wire Wire Line
 	9000 2650 8850 2650
+$Comp
+L R R?
+U 1 1 55F9D523
+P 6950 5400
+F 0 "R?" V 7030 5400 50  0000 C CNN
+F 1 "330" V 6950 5400 50  0000 C CNN
+F 2 "" V 6880 5400 30  0000 C CNN
+F 3 "" H 6950 5400 30  0000 C CNN
+	1    6950 5400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6800 5400 6700 5400
+Wire Wire Line
+	7100 5400 7150 5400
+Wire Wire Line
+	7150 5300 7150 5500
+Wire Wire Line
+	7150 5500 7400 5500
+Connection ~ 7150 5400
+$Comp
+L R R?
+U 1 1 55F9DB47
+P 7150 5150
+F 0 "R?" V 7230 5150 50  0000 C CNN
+F 1 "660" V 7150 5150 50  0000 C CNN
+F 2 "" V 7080 5150 30  0000 C CNN
+F 3 "" H 7150 5150 30  0000 C CNN
+	1    7150 5150
+	-1   0    0    1   
+$EndComp
+Text GLabel 7150 4950 1    60   Input ~ 0
+GND
+Wire Wire Line
+	7150 4950 7150 5000
+Wire Notes Line
+	7850 6250 7850 4650
+Wire Notes Line
+	7850 4650 6250 4650
+Wire Notes Line
+	6250 4650 6250 6250
+Wire Notes Line
+	6250 6250 7850 6250
+Text Notes 6800 6200 0    60   ~ 0
+BLUETOOTH HEADER
 $EndSCHEMATC
