@@ -1,4 +1,4 @@
-update=Wed 16 Sep 2015 13:55:26 CEST
+update=Wed 16 Sep 2015 14:01:06 CEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,6 +23,8 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=
@@ -56,5 +58,5 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-[general]
-version=1
+LibName30=libraries/arduino_shieldsNCL
+LibName31=libraries/Header1x01
