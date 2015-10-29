@@ -106,19 +106,51 @@ void manageIncomming(char _incomming){
       }
       if(_incomming == 'a'){
         Serial.println("a");
-        moveFordward_L1();
+        moveFordwardL1();
       }
       if(_incomming == 'b'){
         Serial.println("b");
-        moveFordward_L2();
+        moveFordwardL2();
       }
       if(_incomming == 'c'){
         Serial.println("c");
-        moveFordward_L3();
+        moveFordwardL3();
       }
       if(_incomming == 'd'){
         Serial.println("d");
-        moveFordward_L4();
+        moveFordwardL4();
+      }
+      if(_incomming == 'e'){
+        Serial.println("e");
+        moveBackwardsL1();
+      }
+      if(_incomming == 'f'){
+        Serial.println("f");
+        moveBackwardsL2();
+      }
+      if(_incomming == 'g'){
+        Serial.println("g");
+        moveBackwardsL3();
+      }
+      if(_incomming == 'h'){
+        Serial.println("h");
+        moveBackwardsL4();
+      }
+      if(_incomming == 'i'){
+        Serial.println("i");
+        moveMidL1();
+      }
+      if(_incomming == 'j'){
+        Serial.println("j");
+        moveMidL2();
+      }
+      if(_incomming == 'k'){
+        Serial.println("k");
+        moveMidL3();
+      }
+      if(_incomming == 'l'){
+        Serial.println("l");
+        moveMidL4();
       }
 }
 void manageServos(int _servo, int _pos) {
@@ -194,9 +226,9 @@ void makeX(){
 }
 void midServosStable(){
   servo1.write(50);
-  servo5.write(85);
+  servo5.write(75);
   servo8.write(90);
-  servo11.write(80);
+  servo11.write(115);
 }
 void standUp(){
   //move inner servos
@@ -212,6 +244,7 @@ void standUp(){
 void standDown(){
   servo1.write(50);
   servo5.write(85);
+  servo4.write(55);
   servo2.write(170);
   servo6.write(30);
   servo9.write(135);
@@ -231,41 +264,89 @@ void lift(){
 }
 void moveFordward(){
   cross();
-  moveFordward_L1();
+  moveFordwardL1();
 }
-void moveFordward_L1(){
-  servo11.write(55);
-  delay(10);
+void moveFordwardL1(){
+  servo11.write(90);
+  delay(50);
   servo10.write(90);
   delay(10);
-  servo11.write(80);
+  servo11.write(115);
 }
-void moveFordward_L2(){
+void moveFordwardL2(){
   servo1.write(90);
-  delay(10);
+  delay(50);
   servo3.write(90);
   delay(10);
   servo1.write(50);
 }
-void moveFordward_L3(){
+void moveFordwardL3(){
   servo8.write(130);
-  delay(10);
+  delay(50);
   servo7.write(160);
   delay(10);
   servo8.write(90);
 }
-void moveFordward_L4(){
-  servo1.write(90);
+void moveFordwardL4(){
+  servo5.write(55);
+  delay(50);
+  servo4.write(30);
   delay(10);
-  servo3.write();
+  servo5.write(80);
+}
+void moveMidL1(){
+  servo11.write(90);
+  delay(50);
+  servo10.write(45);
+  delay(10);
+  servo11.write(115);
+}
+void moveMidL2(){
+  servo1.write(90);
+  delay(50);
+  servo3.write(130);
   delay(10);
   servo1.write(50);
 }
-
+void moveMidL3(){
+  servo8.write(130);
+  delay(50);
+  servo7.write(130);
+  delay(10);
+  servo8.write(90);
+}
+void moveMidL4(){
+  servo5.write(55);
+  delay(50);
+  servo4.write(30);
+  delay(10);
+  servo5.write(80);
+}
+void moveBackwardsL1(){
+  servo11.write(90);
+  delay(50);
+  servo10.write(20);
+  delay(10);
+  servo11.write(115);
+}
+void moveBackwardsL2(){
+  servo1.write(90);
+  delay(50);
+  servo3.write(150);
+  delay(10);
+  servo1.write(50);
+}
 void moveBackwardsL3(){
   servo8.write(130);
-  delay(10);
+  delay(50);
   servo7.write(90);
   delay(10);
   servo8.write(90);
+}
+void moveBackwardsL4(){
+  servo5.write(55);
+  delay(50);
+  servo4.write(90);
+  delay(10);
+  servo5.write(80);
 }
