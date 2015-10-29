@@ -36,35 +36,7 @@ void loop() {
   if (Serial.available() > 0) {
     char incomming = Serial.read();
 
-    if(incomming == 'A'){
-      Serial.println("A");
-      midServosStable();
-      standDown();
-    }
-    if(incomming == 'B'){
-      Serial.println("B");
-      midServosStable();
-      standUp();
-    }
-    if(incomming == 'C'){
-      Serial.println("C");
-      midServosStable();
-      makeX();
-    }
-    if(incomming == 'D'){
-      Serial.println("D");
-      midServosStable();
-    }
-    if(incomming == 'E'){
-      Serial.println("E");
-      midServosStable();
-      cross();
-    }
-    if(incomming == 'F'){
-      Serial.println("F");
-      midServosStable();
-      lift();
-    }
+
     if (incomming == 'S'){
       Serial.println("S");
       servo = Serial.parseInt();
@@ -77,12 +49,78 @@ void loop() {
       }
       servo = 0;
       pos = 90;
+    }else{
+      manageIncomming(incomming);
     }
 
   }
 
 }
+void manageIncomming(char _incomming){
 
+      if(_incomming == 'A'){
+        Serial.println("A");
+        midServosStable();
+        standDown();
+      }
+      if(_incomming == 'B'){
+        Serial.println("B");
+        midServosStable();
+        standUp();
+      }
+      if(_incomming == 'C'){
+        Serial.println("C");
+        midServosStable();
+        makeX();
+      }
+      if(_incomming == 'D'){
+        Serial.println("D");
+        midServosStable();
+      }
+      if(_incomming == 'E'){
+        Serial.println("E");
+        midServosStable();
+        cross();
+      }
+      if(_incomming == 'F'){
+        Serial.println("F");
+        midServosStable();
+        lift();
+      }
+      if(_incomming == 'G'){
+        Serial.println("G");
+        midServosStable();
+        lift();
+      }
+      if(_incomming == 'H'){
+        Serial.println("H");
+
+      }
+      if(_incomming == 'I'){
+        Serial.println("I");
+
+      }
+      if(_incomming == 'J'){
+        Serial.println("J");
+
+      }
+      if(_incomming == 'a'){
+        Serial.println("a");
+        moveFordward_L1();
+      }
+      if(_incomming == 'b'){
+        Serial.println("b");
+        moveFordward_L2();
+      }
+      if(_incomming == 'c'){
+        Serial.println("c");
+        moveFordward_L3();
+      }
+      if(_incomming == 'd'){
+        Serial.println("d");
+        moveFordward_L4();
+      }
+}
 void manageServos(int _servo, int _pos) {
   Serial.print("Moving servo");
   Serial.println(_servo);
@@ -190,4 +228,44 @@ void lift(){
   servo6.write(90);
   servo9.write(70);
   servo12.write(80);
+}
+void moveFordward(){
+  cross();
+  moveFordward_L1();
+}
+void moveFordward_L1(){
+  servo11.write(55);
+  delay(10);
+  servo10.write(90);
+  delay(10);
+  servo11.write(80);
+}
+void moveFordward_L2(){
+  servo1.write(90);
+  delay(10);
+  servo3.write(90);
+  delay(10);
+  servo1.write(50);
+}
+void moveFordward_L3(){
+  servo8.write(130);
+  delay(10);
+  servo7.write(160);
+  delay(10);
+  servo8.write(90);
+}
+void moveFordward_L4(){
+  servo1.write(90);
+  delay(10);
+  servo3.write();
+  delay(10);
+  servo1.write(50);
+}
+
+void moveBackwardsL3(){
+  servo8.write(130);
+  delay(10);
+  servo7.write(90);
+  delay(10);
+  servo8.write(90);
 }
