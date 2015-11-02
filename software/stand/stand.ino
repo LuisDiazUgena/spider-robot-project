@@ -28,6 +28,7 @@ void setup() {
   delay(50);
   Serial.println("Ready!");
 }
+
 int servo;
 int pos;
 
