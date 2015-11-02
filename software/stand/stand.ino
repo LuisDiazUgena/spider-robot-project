@@ -227,7 +227,7 @@ void makeX(){
 void midServosStable(){
   servo1.write(50);
   servo5.write(75);
-  servo8.write(90);
+  servo8.write(75);
   servo11.write(115);
 }
 void standUp(){
