@@ -8,10 +8,12 @@ void setup() {
   Serial.println("Hola");
   delay(100);
   spider.initialize();
+  delay(100);
+  spider.cross();
+  delay(100);
+  spider.standDown();
 }
 
 void loop() {
-  spider.standUp();
-  delay(1000);
-  spider.standDown();
+
 }
