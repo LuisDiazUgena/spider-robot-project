@@ -1,4 +1,4 @@
-update=Wed 16 Sep 2015 15:39:59 CEST
+update=10/11/2015 14:02:57
 version=1
 last_client=kicad
 [pcbnew]
@@ -60,3 +60,4 @@ LibName28=contrib
 LibName29=valves
 LibName30=libraries/arduino_shieldsNCL
 LibName31=libraries/Header1x01
+LibName32=C:/Users/Luis.diaz/Desktop/PCBs/Library/arduino_shields

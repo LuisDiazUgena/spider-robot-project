@@ -29,6 +29,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:Header1x01
+LIBS:arduino_shields
 LIBS:spider-robot-controller-cache
 EELAYER 25 0
 EELAYER END
@@ -44,142 +45,59 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L AVR-ISP-6 CON1
-U 1 1 55F95A1F
-P 8950 5450
-F 0 "CON1" H 8845 5690 50  0000 C CNN
-F 1 "AVR-ISP-6" H 8685 5220 50  0000 L BNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x03" V 8430 5490 50  0001 C CNN
-F 3 "" H 8925 5450 60  0000 C CNN
-	1    8950 5450
-	1    0    0    -1  
-$EndComp
-$Comp
-L ATMEGA328-P IC1
-U 1 1 55F95AA5
-P 8650 1950
-F 0 "IC1" H 7900 3200 40  0000 L BNN
-F 1 "ATMEGA328-P" H 9050 550 40  0000 L BNN
-F 2 "library:ATMEGA328P-PU" H 8650 1950 30  0000 C CIN
-F 3 "" H 8650 1950 60  0000 C CNN
-	1    8650 1950
-	1    0    0    -1  
-$EndComp
-Text GLabel 8450 5550 0    60   Input ~ 0
-RST
-Wire Wire Line
-	8450 5550 8800 5550
-Text GLabel 8200 5450 0    60   Input ~ 0
-SCK
-Wire Wire Line
-	8200 5450 8800 5450
-Text GLabel 8450 5350 0    60   Input ~ 0
-MISO
-Wire Wire Line
-	8450 5350 8800 5350
-Text GLabel 9450 5450 2    60   Input ~ 0
-MOSI
-Wire Wire Line
-	9450 5450 9050 5450
-Text GLabel 9750 5550 2    60   Input ~ 0
-GND
-Wire Wire Line
-	9750 5550 9050 5550
-Text GLabel 9750 5350 2    60   Input ~ 0
+Text GLabel 4250 1750 0    60   Input ~ 0
 VCC
-Wire Wire Line
-	9050 5350 9750 5350
-Wire Notes Line
-	7900 5150 10550 5150
-Wire Notes Line
-	10550 5150 10550 6250
-Wire Notes Line
-	10550 6250 7900 6250
-Wire Notes Line
-	7900 6250 7900 5150
-Text Notes 9500 6200 0    60   ~ 0
-PROGRAMMER HEADER
-Text GLabel 9800 2300 2    60   Input ~ 0
-RST
-Text GLabel 10000 1350 2    60   Input ~ 0
-SCK
-Text GLabel 7050 5800 0    60   Input ~ 0
-VCC
-Text GLabel 7300 5700 0    60   Input ~ 0
+Text GLabel 4500 1650 0    60   Input ~ 0
 GND
-Text GLabel 7550 3050 0    60   Input ~ 0
+Text GLabel 10250 1700 2    60   Input ~ 0
 GND
-Wire Wire Line
-	7550 3050 7750 3050
-Wire Wire Line
-	7750 3150 7650 3150
-Wire Wire Line
-	7650 3150 7650 3050
-Connection ~ 7650 3050
-Text GLabel 7500 850  0    60   Input ~ 0
-VCC
-Wire Wire Line
-	7500 850  7750 850 
 $Comp
 L SW_PUSH SW1
 U 1 1 55F95F04
-P 9550 4200
-F 0 "SW1" H 9700 4310 50  0000 C CNN
-F 1 "SW_PUSH" H 9550 4120 50  0000 C CNN
-F 2 "library:SW_PUSH" H 9550 4200 60  0001 C CNN
-F 3 "" H 9550 4200 60  0000 C CNN
-	1    9550 4200
+P 5100 2600
+F 0 "SW1" H 5250 2710 50  0000 C CNN
+F 1 "SW_PUSH" H 5100 2520 50  0000 C CNN
+F 2 "library:SW_PUSH" H 5100 2600 60  0001 C CNN
+F 3 "" H 5100 2600 60  0000 C CNN
+	1    5100 2600
 	1    0    0    -1  
 $EndComp
-Text GLabel 10000 4200 2    60   Input ~ 0
+Text GLabel 5550 2600 2    60   Input ~ 0
 GND
 Wire Wire Line
-	10000 4200 9850 4200
+	5550 2600 5400 2600
 $Comp
 L R R1
 U 1 1 55F95FFC
-P 9050 4500
-F 0 "R1" V 9130 4500 50  0000 C CNN
-F 1 "10K" V 9050 4500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 8980 4500 30  0001 C CNN
-F 3 "" H 9050 4500 30  0000 C CNN
-	1    9050 4500
+P 4600 2900
+F 0 "R1" V 4680 2900 50  0000 C CNN
+F 1 "10K" V 4600 2900 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 4530 2900 30  0001 C CNN
+F 3 "" H 4600 2900 30  0000 C CNN
+	1    4600 2900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9050 4350 9050 4200
-Connection ~ 9050 4200
-Text GLabel 9050 4800 3    60   Input ~ 0
+	4600 2750 4600 2600
+Connection ~ 4600 2600
+Text GLabel 4600 3200 3    60   Input ~ 0
 VCC
 Wire Wire Line
-	9050 4800 9050 4650
-Text GLabel 8900 4200 0    60   Input ~ 0
+	4600 3200 4600 3050
+Text GLabel 4450 2600 0    60   Input ~ 0
 RST
 Wire Wire Line
-	9800 2300 9650 2300
-Wire Wire Line
-	8900 4200 9250 4200
+	4450 2600 4800 2600
 Wire Notes Line
-	10550 5100 7900 5100
+	6100 3500 3450 3500
 Wire Notes Line
-	7900 5100 7900 4000
+	3450 3500 3450 2400
 Wire Notes Line
-	7900 4000 10550 4000
+	3450 2400 6100 2400
 Wire Notes Line
-	10550 4000 10550 5100
-Text Notes 9850 5050 0    60   ~ 0
+	6100 2400 6100 3500
+Text Notes 5400 3450 0    60   ~ 0
 RESET CIRCUIT
-Wire Wire Line
-	9650 1350 10000 1350
-Text GLabel 10000 1250 2    60   Input ~ 0
-MISO
-Wire Wire Line
-	9650 1250 10000 1250
-Text GLabel 10000 1150 2    60   Input ~ 0
-MOSI
-Wire Wire Line
-	9650 1150 10000 1150
 $Comp
 L CONN_01X03 P1
 U 1 1 55F96558
@@ -466,319 +384,67 @@ Wire Notes Line
 	3300 550  3300 4150
 Text Notes 2600 4100 0    60   ~ 0
 Servo Headers
-Text GLabel 9750 2650 2    60   Input ~ 0
+Text GLabel 10000 3000 2    60   Input ~ 0
 S1
-Wire Wire Line
-	9750 2650 9650 2650
-Text GLabel 9950 2750 2    60   Input ~ 0
+Text GLabel 10250 2900 2    60   Input ~ 0
 S2
-Wire Wire Line
-	9950 2750 9650 2750
-Text GLabel 9750 2850 2    60   Input ~ 0
+Text GLabel 10000 2800 2    60   Input ~ 0
 S3
-Wire Wire Line
-	9750 2850 9650 2850
-Text GLabel 9950 2950 2    60   Input ~ 0
+Text GLabel 10250 2700 2    60   Input ~ 0
 S4
-Wire Wire Line
-	9950 2950 9650 2950
-Text GLabel 9750 3050 2    60   Input ~ 0
+Text GLabel 10000 2600 2    60   Input ~ 0
 S5
-Wire Wire Line
-	9750 3050 9650 3050
-Text GLabel 9950 3150 2    60   Input ~ 0
+Text GLabel 10250 2500 2    60   Input ~ 0
 S6
-Wire Wire Line
-	9950 3150 9650 3150
-Text GLabel 9750 850  2    60   Input ~ 0
+Text GLabel 10250 2300 2    60   Input ~ 0
 S7
-Wire Wire Line
-	9750 850  9650 850 
-Text GLabel 9950 950  2    60   Input ~ 0
+Text GLabel 10000 2200 2    60   Input ~ 0
 S8
-Wire Wire Line
-	9950 950  9650 950 
-Text GLabel 9750 1050 2    60   Input ~ 0
+Text GLabel 10250 2100 2    60   Input ~ 0
 S9
-Wire Wire Line
-	9750 1050 9650 1050
-Text GLabel 9750 1800 2    60   Input ~ 0
+Text GLabel 10000 2000 2    60   Input ~ 0
 S10
-Wire Wire Line
-	9750 1800 9650 1800
-Text GLabel 9950 1900 2    60   Input ~ 0
+Text GLabel 10250 1900 2    60   Input ~ 0
 S11
-Wire Wire Line
-	9950 1900 9650 1900
-Text GLabel 9750 2000 2    60   Input ~ 0
+Text GLabel 10000 1800 2    60   Input ~ 0
 S12
-Wire Wire Line
-	9750 2000 9650 2000
-Wire Wire Line
-	7750 1150 7650 1150
-Wire Wire Line
-	7650 1150 7650 850 
-Connection ~ 7650 850 
-$Comp
-L Crystal_Small Y1
-U 1 1 55F98E0B
-P 9950 1550
-F 0 "Y1" H 9950 1650 50  0000 C CNN
-F 1 "16MHz" V 9950 1350 50  0000 C CNN
-F 2 "Crystals:Crystal_HC49-U_Vertical" H 9950 1550 60  0001 C CNN
-F 3 "" H 9950 1550 60  0000 C CNN
-	1    9950 1550
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	9650 1450 10350 1450
-Wire Wire Line
-	9650 1550 9750 1550
-Wire Wire Line
-	9750 1550 9750 1650
-Wire Wire Line
-	9750 1650 10350 1650
-Connection ~ 9950 1450
-Connection ~ 9950 1650
-$Comp
-L C C1
-U 1 1 55F9917D
-P 10500 1450
-F 0 "C1" H 10525 1550 50  0000 L CNN
-F 1 "22pF" H 10300 1350 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Disc_D3_P2.5" H 10538 1300 30  0001 C CNN
-F 3 "" H 10500 1450 60  0000 C CNN
-	1    10500 1450
-	0    1    1    0   
-$EndComp
-$Comp
-L C C2
-U 1 1 55F99278
-P 10500 1650
-F 0 "C2" H 10525 1750 50  0000 L CNN
-F 1 "22pF" H 10525 1550 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Disc_D3_P2.5" H 10538 1500 30  0001 C CNN
-F 3 "" H 10500 1650 60  0000 C CNN
-	1    10500 1650
-	0    1    1    0   
-$EndComp
-Text GLabel 10900 1550 2    60   Input ~ 0
-GND
-Wire Wire Line
-	10650 1450 10800 1450
-Wire Wire Line
-	10800 1450 10800 1650
-Wire Wire Line
-	10800 1650 10650 1650
-Wire Wire Line
-	10900 1550 10800 1550
-Connection ~ 10800 1550
-$Comp
-L BARREL_JACK CON2
-U 1 1 55F99D4A
-P 3800 1150
-F 0 "CON2" H 3800 1400 60  0000 C CNN
-F 1 "BARREL_JACK" H 3800 950 60  0000 C CNN
-F 2 "library:BARREL_JACK" H 3800 1150 60  0001 C CNN
-F 3 "" H 3800 1150 60  0000 C CNN
-	1    3800 1150
-	1    0    0    -1  
-$EndComp
-$Comp
-L LM7805 U1
-U 1 1 55F99DFD
-P 6200 1000
-F 0 "U1" H 6350 804 60  0000 C CNN
-F 1 "LM7805" H 6200 1200 60  0000 C CNN
-F 2 "library:LM7805" H 6200 1000 60  0001 C CNN
-F 3 "" H 6200 1000 60  0000 C CNN
-	1    6200 1000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4100 1150 4200 1150
-Wire Wire Line
-	4200 1250 4100 1250
-Text GLabel 6850 950  2    60   Input ~ 0
-VCC
-$Comp
-L C C3
-U 1 1 55F9A6BA
-P 5650 1250
-F 0 "C3" H 5675 1350 50  0000 L CNN
-F 1 "100nF" H 5400 1150 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Radial_D10_L13_P5" H 5688 1100 30  0001 C CNN
-F 3 "" H 5650 1250 60  0000 C CNN
-	1    5650 1250
-	-1   0    0    1   
-$EndComp
-Connection ~ 5650 950 
-Wire Wire Line
-	5650 950  5650 1100
-$Comp
-L C C4
-U 1 1 55F9AD53
-P 6700 1250
-F 0 "C4" H 6725 1350 50  0000 L CNN
-F 1 "10nF" H 6725 1150 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Radial_D5_L6_P2.5" H 6738 1100 30  0001 C CNN
-F 3 "" H 6700 1250 60  0000 C CNN
-	1    6700 1250
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	6600 950  6850 950 
-Connection ~ 6700 950 
-Wire Wire Line
-	6700 1100 6700 950 
-Wire Wire Line
-	4200 1150 4200 1450
-Connection ~ 4200 1250
-Text GLabel 4200 1450 3    60   Input ~ 0
-GND
-Text GLabel 6200 1550 3    60   Input ~ 0
-GND
-Wire Wire Line
-	6200 1250 6200 1550
-Wire Wire Line
-	5650 1400 5650 1450
-Wire Wire Line
-	5650 1450 6700 1450
-Connection ~ 6200 1450
-Wire Wire Line
-	6700 1450 6700 1400
 $Comp
 L CONN_01X06 P13
 U 1 1 55F9C036
-P 7600 5650
-F 0 "P13" H 7600 6000 50  0000 C CNN
-F 1 "Bluetooth_header" V 7700 5650 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x06" H 7600 5650 60  0001 C CNN
-F 3 "" H 7600 5650 60  0000 C CNN
-	1    7600 5650
+P 4800 1600
+F 0 "P13" H 4800 1950 50  0000 C CNN
+F 1 "Bluetooth_header" V 4900 1600 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x06" H 4800 1600 60  0001 C CNN
+F 3 "" H 4800 1600 60  0000 C CNN
+	1    4800 1600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7050 5800 7400 5800
+	4250 1750 4600 1750
 Wire Wire Line
-	7300 5700 7400 5700
-Text GLabel 7050 5600 0    60   Input ~ 0
+	4500 1650 4600 1650
+Text GLabel 4250 1550 0    60   Input ~ 0
 BTX
 Wire Wire Line
-	7050 5600 7400 5600
-Text GLabel 6700 5400 0    60   Input ~ 0
+	4250 1550 4600 1550
+Text GLabel 4250 1350 0    60   Input ~ 0
 BRX
-Text GLabel 10050 2550 2    60   Input ~ 0
+Text GLabel 10250 3100 2    60   Input ~ 0
 BRX
-Wire Wire Line
-	9650 2550 10050 2550
-Text GLabel 9800 2450 2    60   Input ~ 0
+Text GLabel 9950 3200 2    60   Input ~ 0
 BTX
 Wire Wire Line
-	9800 2450 9650 2450
-$Comp
-L R R2
-U 1 1 55F9D523
-P 6950 5400
-F 0 "R2" V 7030 5400 50  0000 C CNN
-F 1 "330" V 6950 5400 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 6880 5400 30  0001 C CNN
-F 3 "" H 6950 5400 30  0000 C CNN
-	1    6950 5400
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	6800 5400 6700 5400
-Wire Wire Line
-	7100 5400 7150 5400
-Wire Wire Line
-	7150 5300 7150 5500
-Wire Wire Line
-	7150 5500 7400 5500
-Connection ~ 7150 5400
-$Comp
-L R R3
-U 1 1 55F9DB47
-P 7150 5150
-F 0 "R3" V 7230 5150 50  0000 C CNN
-F 1 "660" V 7150 5150 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 7080 5150 30  0001 C CNN
-F 3 "" H 7150 5150 30  0000 C CNN
-	1    7150 5150
-	-1   0    0    1   
-$EndComp
-Text GLabel 7150 4950 1    60   Input ~ 0
-GND
-Wire Wire Line
-	7150 4950 7150 5000
+	4350 1450 4600 1450
 Wire Notes Line
-	7850 6250 7850 4650
+	5050 2200 5050 600 
 Wire Notes Line
-	7850 4650 6250 4650
+	5050 600  3450 600 
 Wire Notes Line
-	6250 4650 6250 6250
+	3450 600  3450 2200
 Wire Notes Line
-	6250 6250 7850 6250
-Text Notes 6800 6200 0    60   ~ 0
+	3450 2200 5050 2200
+Text Notes 4000 2150 0    60   ~ 0
 BLUETOOTH CIRCUIT
-Text Notes 6450 2150 0    60   ~ 0
-POWER CIRCUIT
-$Comp
-L SWITCH_INV SW2
-U 1 1 55FA1051
-P 4800 1050
-F 0 "SW2" H 4600 1200 50  0000 C CNN
-F 1 "SWITCH_INV" H 4650 900 50  0000 C CNN
-F 2 "library:SWITCH_INVERTER" H 4800 1050 60  0001 C CNN
-F 3 "" H 4800 1050 60  0000 C CNN
-	1    4800 1050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4300 1050 4100 1050
-Wire Wire Line
-	5300 950  5800 950 
-NoConn ~ 5300 1150
-Wire Notes Line
-	3350 600  7200 600 
-Wire Notes Line
-	7200 600  7200 2200
-Wire Notes Line
-	7200 2200 3350 2200
-Wire Notes Line
-	3350 2200 3350 600 
-$Comp
-L LED D1
-U 1 1 55FA299E
-P 5250 1900
-F 0 "D1" H 5250 2000 50  0000 C CNN
-F 1 "LED" H 5250 1800 50  0000 C CNN
-F 2 "LEDs:LED-5MM" H 5250 1900 60  0001 C CNN
-F 3 "" H 5250 1900 60  0000 C CNN
-	1    5250 1900
-	-1   0    0    1   
-$EndComp
-$Comp
-L R R4
-U 1 1 55FA2A05
-P 5650 1900
-F 0 "R4" V 5730 1900 50  0000 C CNN
-F 1 "330" V 5650 1900 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 5580 1900 30  0001 C CNN
-F 3 "" H 5650 1900 30  0000 C CNN
-	1    5650 1900
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5500 1900 5450 1900
-Text GLabel 5950 1900 2    60   Input ~ 0
-GND
-Wire Wire Line
-	5800 1900 5950 1900
-Text GLabel 4950 1900 0    60   Input ~ 0
-VCC
-Wire Wire Line
-	4950 1900 5050 1900
 $Comp
 L CONN_01X01 P16
 U 1 1 55FA3A15
@@ -982,4 +648,112 @@ Wire Wire Line
 Connection ~ 4700 6450
 Text GLabel 4700 6300 1    60   Input ~ 0
 VCC
+Wire Wire Line
+	4350 1350 4350 1450
+Wire Wire Line
+	4250 1350 4350 1350
+Wire Wire Line
+	4600 1850 4450 1850
+Wire Wire Line
+	4450 1850 4450 1750
+Connection ~ 4450 1750
+$Comp
+L CONN_01X01 P29
+U 1 1 56423894
+P 1750 5900
+F 0 "P29" H 1750 6000 50  0000 C CNN
+F 1 "CONN_01X01" V 1850 5900 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01" H 1750 5900 60  0001 C CNN
+F 3 "" H 1750 5900 60  0000 C CNN
+	1    1750 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X01 P28
+U 1 1 5642389A
+P 950 5900
+F 0 "P28" H 950 6000 50  0000 C CNN
+F 1 "CONN_01X01" V 1050 5900 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01" H 950 5900 60  0001 C CNN
+F 3 "" H 950 5900 60  0000 C CNN
+	1    950  5900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1150 5900 1550 5900
+Wire Wire Line
+	1350 5900 1350 5750
+Connection ~ 1350 5900
+Text GLabel 1350 5750 1    60   Input ~ 0
+BRX
+$Comp
+L ARDUINO_SHIELD SHIELD1
+U 1 1 5641EB99
+P 8900 2400
+F 0 "SHIELD1" H 8550 3350 60  0000 C CNN
+F 1 "ARDUINO_SHIELD" H 8950 1450 60  0000 C CNN
+F 2 "freetronics_footprints:ARDUINO_SHIELD_ROUNDPADS" H 8900 2400 60  0001 C CNN
+F 3 "" H 8900 2400 60  0000 C CNN
+	1    8900 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 2400 7950 2400
+Wire Wire Line
+	7950 2300 7750 2300
+Wire Wire Line
+	7750 2300 7750 2400
+Connection ~ 7750 2400
+Wire Wire Line
+	10250 1700 9850 1700
+Wire Wire Line
+	10000 1800 9850 1800
+Wire Wire Line
+	10250 1900 9850 1900
+Wire Wire Line
+	10000 2000 9850 2000
+Wire Wire Line
+	9850 2100 10250 2100
+Wire Wire Line
+	10000 2200 9850 2200
+Wire Wire Line
+	9850 2300 10250 2300
+Wire Wire Line
+	10250 2500 9850 2500
+Wire Wire Line
+	10000 2600 9850 2600
+Wire Wire Line
+	10250 2700 9850 2700
+Wire Wire Line
+	10000 2800 9850 2800
+Wire Wire Line
+	10250 2900 9850 2900
+Wire Wire Line
+	10000 3000 9850 3000
+Text GLabel 7700 2400 0    60   Input ~ 0
+GND
+Wire Wire Line
+	10250 3100 9850 3100
+Wire Wire Line
+	9850 3200 9950 3200
+Wire Notes Line
+	700  5300 5500 5300
+Wire Notes Line
+	5500 5300 5500 7400
+Wire Notes Line
+	5500 7400 700  7400
+Wire Notes Line
+	700  7400 700  5300
+Text Notes 5050 7300 0    60   ~ 0
+Jumpers
+Wire Notes Line
+	7300 1100 10700 1100
+Wire Notes Line
+	10700 1100 10700 3900
+Wire Notes Line
+	10700 3900 7300 3900
+Wire Notes Line
+	7300 3900 7300 1100
+Text Notes 9550 3800 0    60   ~ 0
+ARDUINO CONNECTIONS
 $EndSCHEMATC
