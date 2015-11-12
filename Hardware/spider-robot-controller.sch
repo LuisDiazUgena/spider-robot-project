@@ -650,4 +650,33 @@ Text GLabel 4750 1150 2    60   Input ~ 0
 BTX
 Wire Wire Line
 	4750 1150 4650 1150
+$Comp
+L CONN_01X01 P15
+U 1 1 5644BF11
+P 1750 6250
+F 0 "P15" H 1750 6350 50  0000 C CNN
+F 1 "CONN_01X01" V 1850 6250 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01" H 1750 6250 60  0001 C CNN
+F 3 "" H 1750 6250 60  0000 C CNN
+	1    1750 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X01 P14
+U 1 1 5644BF17
+P 950 6250
+F 0 "P14" H 950 6350 50  0000 C CNN
+F 1 "CONN_01X01" V 1050 6250 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01" H 950 6250 60  0001 C CNN
+F 3 "" H 950 6250 60  0000 C CNN
+	1    950  6250
+	-1   0    0    1   
+$EndComp
+Text GLabel 1350 6100 1    60   Input ~ 0
+GND
+Wire Wire Line
+	1150 6250 1550 6250
+Wire Wire Line
+	1350 6250 1350 6100
+Connection ~ 1350 6250
 $EndSCHEMATC

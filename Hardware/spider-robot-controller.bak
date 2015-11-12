@@ -416,7 +416,7 @@ U 1 1 5644B7AA
 P 4500 850
 F 0 "R3" V 4580 850 50  0000 C CNN
 F 1 "330" V 4500 850 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM15mm" V 4430 850 30  0001 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 4430 850 30  0001 C CNN
 F 3 "" H 4500 850 30  0000 C CNN
 	1    4500 850 
 	0    1    1    0   
@@ -427,7 +427,7 @@ U 1 1 5644BA18
 P 4500 1150
 F 0 "R2" V 4580 1150 50  0000 C CNN
 F 1 "330" V 4500 1150 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM15mm" V 4430 1150 30  0001 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 4430 1150 30  0001 C CNN
 F 3 "" H 4500 1150 30  0000 C CNN
 	1    4500 1150
 	0    1    1    0   
